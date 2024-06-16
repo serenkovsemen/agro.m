@@ -29,13 +29,25 @@
       <p>info@agro.m</p>
     </div>
     <div class="descr">
-      <h1>Описание продукта</h1>
-      <p> Обжаренные до румяной корочки, хрустящие и сочные куриные наггетсы не даром стали любимым лакомством и детей, и взрослых. Нежное белое мясо птицы сохраняет весь свой аромат благодаря золотистой панировке. Это прекрасное сочетание по праву стало настоящим кулинарным бестселлером!
-      <h1>Пищевая ценность:</h1>
-      <p>Белки — 13 г, жиры — 7,4 г, углеводы – 16 г</p>
-      <h1>Энергетическая ценность:</h1>
-      <p>182 ккал/765 кДж</p>
+      <h2>НАПИШИТЕ НАМ</h2>
+      <input class="text" name="name" id="name" placeholder="Ваше имя" data-reg="^[А-ЯЁ][а-яё]*$"/>
+      <input class="text" name="phone" id="phone" placeholder="Ваш телефон" ata-reg="^((\+7|7|8)+([0-9]){10})$"/>
+      <input class="text" name="email" id="email"placeholder="Ваш e-mail" data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"/>
+      <select class="topic" >
+        <option value="">Выберите, c чем связан ваш вопрос</option>
+        <option value="1">Вопрос по продукции</option>
+        <option value="2">Доброе письмо</option>
+        <option value="3">Ошибка на сайте</option>
+        <option value="5">Сотрудничество</option>
+      </select>
+      <input class="text_last" name="msg" id="msg" data-reg="^[А-ЯЁ][а-яё]*$" placeholder=""/>
+      <label class="ui-cb-container">
+        <input name="agree" type="checkbox"> cогласен с обработкой персональных данных
+      </label>
+      <button class="btn">ОТПРАВИТЬ</button>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
