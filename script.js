@@ -53,3 +53,30 @@ function isElementInView(element, fullyInView) {
       element.addEventListener('mouseleave', resetTextColor);
     });
   });
+
+  document.getElementById('feedback-form').onsubmit = function(event) {
+    event.preventDefault();
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    
+    
+    var phoneRegex = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/im;
+    if (!phoneRegex.test(phone)) {
+      alert('Пожалуйста, введите корректный номер телефона.');
+      return;
+    }
+    
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailRegex.test(email)) {
+        alert('Пожалуйста, введите корректный e-mail.');
+        return;
+    }
+    
+    console.log('Имя:', name);
+    console.log('Телефон:', phone);
+    console.log('Почта:', email);
+    console.log('Сообщение:', message);
+    alert('Спасибо за ваше сообщение!');
+  };

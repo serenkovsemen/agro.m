@@ -37,23 +37,15 @@
       <h1>Электронная почта:</h1>
       <p>info@agro.m</p>
     </div>
-    <div class="descr">
-      <h2>НАПИШИТЕ НАМ</h2>
-      <input class="text" name="name" id="name" placeholder="Ваше имя" data-reg="^[А-ЯЁ][а-яё]*$"/>
-      <input class="text" name="phone" id="phone" placeholder="Ваш телефон" ata-reg="^((\+7|7|8)+([0-9]){10})$"/>
-      <input class="text" name="email" id="email"placeholder="Ваш e-mail" data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"/>
-      <select class="topic" >
-        <option value="">Выберите, c чем связан ваш вопрос</option>
-        <option value="1">Вопрос по продукции</option>
-        <option value="2">Доброе письмо</option>
-        <option value="3">Ошибка на сайте</option>
-        <option value="5">Сотрудничество</option>
-      </select>
-      <input class="text_last" name="msg" id="msg" data-reg="^[А-ЯЁ][а-яё]*$" placeholder=""/>
-      <label class="ui-cb-container">
-        <input name="agree" type="checkbox"> cогласен с обработкой персональных данных
-      </label>
-      <button class="btn">ОТПРАВИТЬ</button>
+    <div class="feedback-card">
+      <form id="feedback-form">
+        <h2>НАПИШИТЕ НАМ</h2>
+        <input type="text" id="name" placeholder="Ваше имя" required>
+        <input type="tel" id="phone" placeholder="Номер телефона" required>
+        <input type="em" id="email" placeholder="Ваше e-mail" required>
+        <textarea id="message" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">ОТПРАВИТЬ</button>
+      </form>
     </div>
 </div>
 <script src="script.js"></script>
